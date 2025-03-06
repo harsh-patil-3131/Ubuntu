@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property</title>
+    <style>
+        .parent{
+            border: 2px solid black;
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{ 
+            width: 80vw;
+            height: 30vh;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+        }
+        .box1{
+            background-color: antiquewhite;
+            position: sticky;
+            top: 5px;
+            left: 50px;
+            /* top: 20px;
+            left: 50px; */
+            /* z-index: 1; */
+        }
+        .box2{
+            background-color: aquamarine;
+            /* position: absolute;
+            top: 50px; */
+        }
+        .box3{
+            background-color: blueviolet;
+            /* position: fixed;
+            bottom: 10px;
+            right: 10px; */
+            width: 20vw;
+            z-index: 1;
+        }
+        .box4{
+            background-color: gold;
+            /* z-index: 2; */
+            /* position: sticky; */
+        }
+        </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Harshvardhan Patil</h1>
+    <div class="parent">
+        <!-- <div class="box box4"></div> -->
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>

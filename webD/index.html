@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling List</title>
+    <style>
+        div{
+            background-color: aqua;
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid black;
+            /* display: inline; */
+        }
+        .box{
+            background-color: bisque;
+            color: brown;
+            text-shadow: 5px 5px 10px red;
+            box-shadow: 5px 10px 15px hotpink;
+        }
+        nav ul li{
+            list-style-position: inside;
+            padding: 30px;
+            /* list-style: devanagari; */
+            list-style: none;
+            /* border: 2px solid black; */
+            /* margin: 10px; */
+
+        }
+    </style>
+</head>
+<body>
+    <h1 style=" box-shadow: 5px 5px 15px orange; display: inline; margin: 20px;">I am heading</h1>
+    <div>
+        I am a box
+    </div>
+    <div class="box">
+        I am another box
+    </div>
+
+    <nav>
+        <ul style="display: flex;">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div style="overflow: auto; width: 30vh; height: 10vh;">
+        <p>
+            This is information of 50 words: Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, vel laborum molestiae, in placeat ipsam quisquam veniam fugiat harum nostrum corporis dolor iusto fugit ullam dolorem doloribus iure itaque similique deleniti. Voluptatum iusto maxime magni dolorem quis asperiores assumenda aliquam, accusantium est possimus repellendus sit temporibus ea esse commodi illo!
+        </p>
+    </div>
+</body>
+</html>

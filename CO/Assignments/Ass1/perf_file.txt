@@ -1,0 +1,76 @@
+To generate a performance report for your code using the Linux perf tool, follow these steps:
+
+1. Install perf (If Not Installed)
+
+sudo apt update
+sudo apt install linux-tools-common linux-tools-generic linux-tools-$(uname -r)
+sudo sysctl -w kernel.perf_event_paranoid=1
+
+2. Compile Your C Code with Optimization
+Compile your program with debugging symbols (-g) and optimization flags (-O2 or -O3):
+
+gcc -O2 -g matrix_mul.c -o matrix_mul
+
+3. Run perf to Collect Performance Data
+Run your program with perf stat to measure execution time, cache accesses, and more:
+
+perf stat ./matrix_mul
+
+This will output key performance metrics, such as:
+Execution time (seconds time elapsed)
+CPU cycles
+Instructions executed
+Cache accesses and misses
+
+4. Measure Cache Performance (L1, L2, L3)
+To specifically analyze L1 cache accesses and hit rates, run:
+
+perf stat -e L1-dcache-loads,L1-dcache-load-misses ./matrix_mul
+
+This will show:
+L1 cache loads
+L1 cache misses
+Cache miss rate (misses / loads)
+
+For deeper analysis of all cache levels, use:
+
+perf stat -e cache-references,cache-misses ./matrix_mul
+
+5. Generate a Detailed Performance Report
+To get a more detailed report:
+
+perf record ./matrix_mul
+
+Then, view the report with:
+
+perf report
+
+6. Profile Line-by-Line Execution Time
+To see where the most time is spent:
+
+perf annotate
+
+This helps you identify which lines in your C code are taking the most time.
+
+7. Measure Branch Mis-Predictions and CPU Stalls
+
+perf stat -e branch-misses,stalled-cycles-backend,stalled-cycles-frontend ./matrix_mul
+
+branch-misses → Shows inefficiencies in branching
+stalled-cycles-backend → CPU waiting for memory
+stalled-cycles-frontend → CPU waiting for instruction fetch
+
+8. Save and Export Results
+Redirect output to a file:
+
+perf stat -e L1-dcache-loads,L1-dcache-load-misses ./matrix_mul > perf_report.txt
+
+For a graphical report, use:
+
+perf report --stdio > perf_analysis.txt
+
+Final Notes
+Run before and after optimizations to compare performance.
+Look for improvements in cache hit rate and execution time.
+Higher cache hits & fewer branch misses = better performance!
+
