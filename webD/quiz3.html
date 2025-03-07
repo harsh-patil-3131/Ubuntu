@@ -6,35 +6,78 @@
     <title>Quiz 3</title>
     <style>
         *{
-            background-color: antiquewhite;
+            background-color: aliceblue;
         }
         .box{
-            margin-left: 35vw;
+            margin-left: 37.5vw;
             background-color: white;
             border-radius: 10px;
-            width: 30vw;
+            width: 25vw;
             height: 90vh;
+            border: 1px solid rgb(205, 205, 205);
         }
         .img{
             margin: 0.5vw;
             border-radius: 10px;
-            width: 29vw;
+            width: 24vw;
         }
         span{
-            margin: 1.5vw;
-            padding: 5px;
+            /* margin: 1.5vw;
+            margin-top=10vh;*/
+            padding: 4px;
+            margin: 10px; 
             border: 1px solid rgb(191, 185, 185);
             border-radius: 10px;
             color: grey;
             background-color: white;
         }
+        .heading{
+            background-color: white;
+            color: rgb(51, 51, 51);
+            margin: 1.5vw;
+            font-family: sans-serif;
+        }
+        .p1{
+            color: grey;
+            background-color: white;
+            font-size: larger;
+            margin: 1vw;
+            padding: 1vw;
+        }
+        .p2{
+            display: inline;
+            border-radius: 25px;
+            text-align: center;
+            color: rgb(32, 79, 169);
+            background-color: rgb(132, 207, 206);
+            font-size: larger;
+            margin: 8vw;
+            padding: 15px;
+        }
+        .container{
+            background-color: white;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="box">
-        <img src="image.jpg" alt="image.jpg" class="img">
-        <span>Nature</span>
-        <span>Lake</span>
+        <div class="container">
+            <img src="image2.jpg" alt="image.jpg" class="img">
+        </div>
+        <div class="container" style="margin: 15px;">
+            <span>Mountain</span>
+            <span style="margin-left: 5px;">Cloud</span>
+        </div>
+        <div class="container">
+            <h1 class="heading">Lago di Brais</h1>
+        </div>
+        <div class="container">
+            <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptatibus explicabo aut ipsam commodi, vitae deserunt temporibus delectus rem consectetur!</p>
+        </div>
+        <div class="container">
+            <p class="p2">Read more</p>
+        </div>
     </div>
 </body>
 </html>
