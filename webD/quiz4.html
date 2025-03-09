@@ -6,12 +6,12 @@
     <title>Quiz 4</title>
     <style>
         :root{
-            /* --color: rgb(121, 3, 68);
-            --seccolor: rgb(247, 175, 215); */
+            --color: rgb(121, 3, 68);
+            --seccolor: rgb(247, 175, 215);
             /* --color: rgb(25, 38, 158);
             --seccolor: rgb(196, 196, 245); */
-            --color: rgb(177, 65, 4);
-            --seccolor: rgb(234, 194, 159);
+            /* --color: rgb(177, 65, 4);
+            --seccolor: rgb(234, 194, 159); */
         }
         *{
             margin: 0;
@@ -21,7 +21,6 @@
 
             position: sticky;
             top: 0px;
-            /* bottom: 10px; */
             background-color: var(--seccolor);
             margin: 10px;
             padding: 10px;
@@ -45,14 +44,22 @@
             height: 50vh;
             width: 40vw;
         }
+        ul li a{
+            text-decoration: none;
+            color: var(--color);
+        }
+        ::selection{
+            background-color: black;
+            color: silver;
+        }
     </style>
 </head>
 <body>
     <div class="nav">
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li><a href="/hekarhaibhai.mp3">Home</a></li>
+            <li><a href="/bhupendrajogi.mp4">About</a></li>
+            <li><a href="/Screenshot 2024-08-28 004554.png">Contact</a></li>
         </ul>
     </div>
     <div style="display: flex;">

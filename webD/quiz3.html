@@ -44,19 +44,26 @@
             margin: 1vw;
             padding: 1vw;
         }
-        .p2{
-            display: inline;
-            border-radius: 25px;
-            text-align: center;
-            color: rgb(32, 79, 169);
-            background-color: rgb(132, 207, 206);
-            font-size: larger;
-            margin: 8vw;
-            padding: 15px;
-        }
         .container{
             background-color: white;
             border-radius: 10px;
+        }
+        .button{
+            margin: 0px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .button button{
+            /* margin: 0px; */
+            background-color: aqua;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            color: rgb(26, 111, 148);
+        }
+        .button button:hover{
+            color: rgb(26, 111, 148);
+            background-color: rgb(155, 238, 238);
         }
     </style>
 </head>
@@ -75,8 +82,9 @@
         <div class="container">
             <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptatibus explicabo aut ipsam commodi, vitae deserunt temporibus delectus rem consectetur!</p>
         </div>
-        <div class="container">
-            <p class="p2">Read more</p>
+       
+        <div class="button container">
+            <button>Read More</button>
         </div>
     </div>
 </body>
