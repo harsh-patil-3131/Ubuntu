@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            width: 50vw;
+            height: 90vh;
+            /* padding: 10px; */
+            margin-left: 25vw;
+            display: grid;
+            grid-template-columns: 100px 200px;
+            grid-template-rows: 100px 200px;
+            justify-content: center;
+        }
+        .item{
+            background-color: aquamarine;
+            margin: 20px;
+            border: 2px solid red;
+            font-size: xx-large;
+            text-align: center;
+        }
+        .item-3{
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+        .container-2{
+            margin-top: 50px;
+            border: 2px solid black;
+            width: 50vw;
+            height: 90vh;
+            padding: 10px;
+            margin-left: 25vw;
+            display: grid;
+            grid-template-areas: "nav nav nav nav"
+                                 "side cont cont cont"
+                                 "footer footer footer footer";
+        }
+        .item2-1{
+            grid-area: nav;
+            /* height: 10vh; */
+        }
+        .item2-2{
+            grid-area: side;
+        }
+        .item2-3{
+            grid-area: cont;
+        }
+        .item2-4{
+            grid-area: footer
+            ;
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="https://www.youtube.com/watch?v=7AgEjgUtho4&list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w&index=39&t=552s">Click for more</a>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item item-3">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    <div class="container-2">
+        <div class="item item2-1">1</div>
+        <div class="item item2-2">2</div>
+        <div class="item item2-3">3</div>
+        <div class="item item2-4">4</div>
+        <div class="item item2-5">5</div>
+    </div>
+</body>
+</html>
